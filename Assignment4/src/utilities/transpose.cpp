@@ -1,8 +1,8 @@
 #include "utilities.hpp"
 
 int SimpleTranspose (double *a,
-		     int size,
-		     int ldim)
+		                 int size,
+		                 int ldim)
 {
 	/*Confirm input pointer and size parameters are valid*/
 	if (a == NULL or ldim < size)
@@ -25,9 +25,9 @@ int SimpleTranspose (double *a,
 }
 
 void SwitchBlocks (double *a,
-		   double *b,
-		   int ldim,
-		   int blocksize)
+		               double *b,
+		               int ldim,
+		               int blocksize)
 {
 	for (int i = 0; i < blocksize; i++)
 	{
@@ -41,9 +41,9 @@ void SwitchBlocks (double *a,
 }
 
 int OptimizedTranspose (double *a,
-		        int size,
-			int ldim,
-			int blocksize)
+		                    int size,
+			                  int ldim,
+			                  int blocksize)
 {
 	/*Loop through sublocks*/
 	for (int i = 0; i < size/blocksize; i++)
